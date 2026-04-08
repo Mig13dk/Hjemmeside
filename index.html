@@ -171,15 +171,32 @@
       align-items: center;
     }
 
+    .hero-logo-stage {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(82, 151, 255, 0.20), rgba(18, 34, 62, 0.10) 48%, rgba(255,255,255,0.02) 100%);
+      border: 1px solid rgba(144, 184, 242, 0.14);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.05),
+        0 22px 60px rgba(4, 14, 30, 0.34);
+      backdrop-filter: blur(10px);
+    }
+
     .hero-brand-logo {
-      width: 220px;
-      max-width: 52vw;
+      width: 320px;
+      max-width: min(72vw, 100%);
       height: auto;
       display: block;
-      margin-bottom: 22px;
+      margin: 0;
       filter:
         drop-shadow(0 0 18px rgba(72, 145, 255, 0.22))
-        drop-shadow(0 0 42px rgba(57, 126, 255, 0.18));
+        drop-shadow(0 0 42px rgba(57, 126, 255, 0.18))
+        drop-shadow(0 10px 28px rgba(0, 0, 0, 0.28));
     }
 
     .eyebrow {
@@ -478,21 +495,44 @@
       letter-spacing: -0.03em;
     }
 
-    .mockup-rows {
+    .mockup-workflow-grid {
       display: grid;
-      gap: 8px;
-      margin-top: 10px;
+      gap: 10px;
+      margin-top: 8px;
     }
 
-    .mockup-row {
-      height: 14px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, rgba(96,165,250,0.26), rgba(255,255,255,0.04));
+    .workflow-step {
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(147, 182, 232, 0.08);
     }
 
-    .mockup-row.short { width: 56%; }
-    .mockup-row.medium { width: 74%; }
-    .mockup-row.long { width: 100%; }
+    .workflow-step .step-label {
+      display: block;
+      font-size: 0.68rem;
+      color: #9ab8de;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 5px;
+      font-weight: 800;
+    }
+
+    .workflow-step strong {
+      display: block;
+      color: #ffffff;
+      font-size: 0.96rem;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .workflow-step span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
 
     .dashboard-grid {
       display: grid;
@@ -763,6 +803,15 @@
 
       .topbar-inner { padding: 14px 0; }
       h1 { max-width: none; }
+
+      .hero-logo-stage {
+        display: flex;
+        width: fit-content;
+      }
+
+      .hero-brand-logo {
+        width: 260px;
+      }
     }
 
     @media (max-width: 640px) {
@@ -778,8 +827,13 @@
         box-shadow: none;
       }
 
+      .hero-logo-stage {
+        padding: 16px 18px;
+        border-radius: 22px;
+      }
+
       .hero-brand-logo {
-        width: 170px;
+        width: 220px;
       }
     }
   </style>
@@ -805,7 +859,9 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <img src="logo.png" alt="SchellLogic logo" class="hero-brand-logo" />
+          <div class="hero-logo-stage">
+            <img src="logo.png" alt="SchellLogic logo" class="hero-brand-logo" />
+          </div>
 
           <div class="eyebrow">Built by a financial controller & softwareudvikler</div>
           <h1>En mere intelligent vej til økonomistyring</h1>
@@ -896,12 +952,22 @@
 
               <div class="mockup-panel">
                 <h4>Ledelsesvenligt workflow</h4>
-                <div class="mockup-rows">
-                  <div class="mockup-row long"></div>
-                  <div class="mockup-row medium"></div>
-                  <div class="mockup-row long"></div>
-                  <div class="mockup-row short"></div>
-                  <div class="mockup-row medium"></div>
+                <div class="mockup-workflow-grid">
+                  <div class="workflow-step">
+                    <span class="step-label">1 · Input</span>
+                    <strong>Fælles datagrundlag</strong>
+                    <span>Budget, opfølgning og forecast tager udgangspunkt i samme retning.</span>
+                  </div>
+                  <div class="workflow-step">
+                    <span class="step-label">2 · Overblik</span>
+                    <strong>Klarere beslutningsstøtte</strong>
+                    <span>Ledelsen får et mere roligt og brugbart økonomisk overblik.</span>
+                  </div>
+                  <div class="workflow-step">
+                    <span class="step-label">3 · Flow</span>
+                    <strong>Mindre manuel friktion</strong>
+                    <span>Færre mellemled, færre løse filer og stærkere sammenhæng i processen.</span>
+                  </div>
                 </div>
               </div>
             </div>
