@@ -94,6 +94,23 @@
       flex-wrap: wrap;
     }
 
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      filter:
+        drop-shadow(0 0 10px rgba(72, 145, 255, 0.35))
+        drop-shadow(0 0 26px rgba(57, 126, 255, 0.22));
+      flex-shrink: 0;
+    }
+
     .brand {
       font-size: 1.32rem;
       font-weight: 800;
@@ -169,34 +186,6 @@
       grid-template-columns: 1.02fr 0.98fr;
       gap: 32px;
       align-items: center;
-    }
-
-    .hero-logo-stage {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px 24px;
-      margin-bottom: 24px;
-      border-radius: 28px;
-      background:
-        radial-gradient(circle at 50% 40%, rgba(82, 151, 255, 0.20), rgba(18, 34, 62, 0.10) 48%, rgba(255,255,255,0.02) 100%);
-      border: 1px solid rgba(144, 184, 242, 0.14);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.05),
-        0 22px 60px rgba(4, 14, 30, 0.34);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-brand-logo {
-      width: 320px;
-      max-width: min(72vw, 100%);
-      height: auto;
-      display: block;
-      margin: 0;
-      filter:
-        drop-shadow(0 0 18px rgba(72, 145, 255, 0.22))
-        drop-shadow(0 0 42px rgba(57, 126, 255, 0.18))
-        drop-shadow(0 10px 28px rgba(0, 0, 0, 0.28));
     }
 
     .eyebrow {
@@ -390,148 +379,9 @@
     .hero-card li,
     .mini span,
     .dashboard-card p,
-    .dashboard-footer p,
-    .mockup-shell * {
+    .dashboard-footer p {
       position: relative;
       z-index: 1;
-    }
-
-    .mockup-shell {
-      margin: 18px 0 18px;
-      border-radius: 24px;
-      border: 1px solid rgba(149, 186, 238, 0.18);
-      background: linear-gradient(180deg, rgba(5, 13, 28, 0.92) 0%, rgba(8, 19, 39, 0.96) 100%);
-      overflow: hidden;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
-    }
-
-    .mockup-topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 14px 16px;
-      border-bottom: 1px solid rgba(147, 182, 232, 0.10);
-      background: rgba(255,255,255,0.02);
-    }
-
-    .mockup-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .mockup-brand img {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 8px rgba(80, 151, 255, 0.28));
-    }
-
-    .mockup-brand span {
-      font-size: 0.9rem;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: -0.02em;
-    }
-
-    .mockup-badge {
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: #cfe3ff;
-      border: 1px solid rgba(132, 180, 245, 0.16);
-      background: rgba(78, 144, 255, 0.08);
-    }
-
-    .mockup-content {
-      padding: 16px;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 14px;
-    }
-
-    .mockup-panel {
-      border-radius: 18px;
-      border: 1px solid rgba(147, 182, 232, 0.10);
-      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.025) 100%);
-      padding: 14px;
-    }
-
-    .mockup-panel h4 {
-      font-size: 0.92rem;
-      margin-bottom: 10px;
-      color: #dce9ff;
-      letter-spacing: -0.02em;
-    }
-
-    .mockup-kpis {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    .mockup-kpi {
-      padding: 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(147, 182, 232, 0.08);
-    }
-
-    .mockup-kpi .label {
-      display: block;
-      font-size: 0.7rem;
-      color: #9ab8de;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 5px;
-      font-weight: 800;
-    }
-
-    .mockup-kpi strong {
-      color: #ffffff;
-      font-size: 1rem;
-      letter-spacing: -0.03em;
-    }
-
-    .mockup-workflow-grid {
-      display: grid;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .workflow-step {
-      padding: 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(147, 182, 232, 0.08);
-    }
-
-    .workflow-step .step-label {
-      display: block;
-      font-size: 0.68rem;
-      color: #9ab8de;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 5px;
-      font-weight: 800;
-    }
-
-    .workflow-step strong {
-      display: block;
-      color: #ffffff;
-      font-size: 0.96rem;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-    }
-
-    .workflow-step span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 0.84rem;
-      line-height: 1.45;
     }
 
     .dashboard-grid {
@@ -791,8 +641,7 @@
       .grid-3,
       .grid-2,
       .contact-wrap,
-      .hero-trustbar,
-      .mockup-content {
+      .hero-trustbar {
         grid-template-columns: 1fr;
       }
 
@@ -803,20 +652,10 @@
 
       .topbar-inner { padding: 14px 0; }
       h1 { max-width: none; }
-
-      .hero-logo-stage {
-        display: flex;
-        width: fit-content;
-      }
-
-      .hero-brand-logo {
-        width: 260px;
-      }
     }
 
     @media (max-width: 640px) {
       .hero { padding-top: 42px; }
-
       .feature, .module, .about-card, .contact-card, .hero-card, .highlight, .quote-card {
         padding: 20px;
       }
@@ -827,13 +666,9 @@
         box-shadow: none;
       }
 
-      .hero-logo-stage {
-        padding: 16px 18px;
-        border-radius: 22px;
-      }
-
-      .hero-brand-logo {
-        width: 220px;
+      .brand-logo {
+        width: 46px;
+        height: 46px;
       }
     }
   </style>
@@ -841,11 +676,13 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
-        SchellLogic
-        <small>Budget, opfølgning, forecast og årsregnskab · One intelligent solution</small>
+      <div class="brand-wrap">
+        <img src="logo.png" alt="SchellLogic logo" class="brand-logo" />
+        <div class="brand">
+          SchellLogic
+          <small>Budget, opfølgning, forecast og årsregnskab · One intelligent solution</small>
+        </div>
       </div>
-
       <nav class="nav">
         <a href="#udfordring">Udfordringen</a>
         <a href="#moduler">Moduler</a>
@@ -859,10 +696,6 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="hero-logo-stage">
-            <img src="logo.png" alt="SchellLogic logo" class="hero-brand-logo" />
-          </div>
-
           <div class="eyebrow">Built by a financial controller & softwareudvikler</div>
           <h1>En mere intelligent vej til økonomistyring</h1>
           <p class="lead">
@@ -908,70 +741,15 @@
         <div class="card hero-card">
           <div class="hero-card-header">
             <div>
-              <div class="hero-card-label">Platform preview</div>
-              <div class="hero-card-title">Et mere intelligent alternativ til Excel-kaos</div>
+              <div class="hero-card-label">Founder preview</div>
+              <div class="hero-card-title">Et mere eksklusivt alternativ til Excel-kaos</div>
             </div>
             <div class="live-badge">Founder-led platform</div>
           </div>
 
           <p class="muted">
-            Mange organisationer har brug for mere professionaliseret økonomistyring, men ønsker hverken at blive låst i tunge systemer eller trukket ind i lange, dyre IT-forløb. SchellLogic er skabt som et mere gennemtænkt alternativ: elegant, fokuseret og bygget til praksis.
+            Mange organisationer har brug for mere professionaliseret økonomistyring, men ønsker hverken at blive låst i tunge systemer eller trukket ind i lange, dyre IT-forløb. SchellLogic er skabt som et mere intelligent alternativ: elegant, fokuseret og bygget til praksis.
           </p>
-
-          <div class="mockup-shell">
-            <div class="mockup-topbar">
-              <div class="mockup-brand">
-                <img src="logo.png" alt="SchellLogic logo" />
-                <span>SchellLogic</span>
-              </div>
-              <div class="mockup-badge">Executive workspace</div>
-            </div>
-
-            <div class="mockup-content">
-              <div class="mockup-panel">
-                <h4>Økonomisk overblik</h4>
-                <div class="mockup-kpis">
-                  <div class="mockup-kpi">
-                    <span class="label">Budget</span>
-                    <strong>Struktureret</strong>
-                  </div>
-                  <div class="mockup-kpi">
-                    <span class="label">Forecast</span>
-                    <strong>Opdateret</strong>
-                  </div>
-                  <div class="mockup-kpi">
-                    <span class="label">Opfølgning</span>
-                    <strong>Klarhed</strong>
-                  </div>
-                  <div class="mockup-kpi">
-                    <span class="label">Afslutning</span>
-                    <strong>Sammenhæng</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mockup-panel">
-                <h4>Ledelsesvenligt workflow</h4>
-                <div class="mockup-workflow-grid">
-                  <div class="workflow-step">
-                    <span class="step-label">1 · Input</span>
-                    <strong>Fælles datagrundlag</strong>
-                    <span>Budget, opfølgning og forecast tager udgangspunkt i samme retning.</span>
-                  </div>
-                  <div class="workflow-step">
-                    <span class="step-label">2 · Overblik</span>
-                    <strong>Klarere beslutningsstøtte</strong>
-                    <span>Ledelsen får et mere roligt og brugbart økonomisk overblik.</span>
-                  </div>
-                  <div class="workflow-step">
-                    <span class="step-label">3 · Flow</span>
-                    <strong>Mindre manuel friktion</strong>
-                    <span>Færre mellemled, færre løse filer og stærkere sammenhæng i processen.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div class="dashboard-grid">
             <div class="dashboard-card primary-glow">
