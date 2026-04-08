@@ -94,6 +94,23 @@
       flex-wrap: wrap;
     }
 
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      filter:
+        drop-shadow(0 0 10px rgba(72, 145, 255, 0.35))
+        drop-shadow(0 0 26px rgba(57, 126, 255, 0.22));
+      flex-shrink: 0;
+    }
+
     .brand {
       font-size: 1.32rem;
       font-weight: 800;
@@ -648,15 +665,23 @@
         background: none;
         box-shadow: none;
       }
+
+      .brand-logo {
+        width: 46px;
+        height: 46px;
+      }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
-        SchellLogic
-        <small>Budget, opfølgning, forecast og årsregnskab · One intelligent solution</small>
+      <div class="brand-wrap">
+        <img src="logo.png" alt="SchellLogic logo" class="brand-logo" />
+        <div class="brand">
+          SchellLogic
+          <small>Budget, opfølgning, forecast og årsregnskab · One intelligent solution</small>
+        </div>
       </div>
       <nav class="nav">
         <a href="#udfordring">Udfordringen</a>
@@ -719,11 +744,11 @@
               <div class="hero-card-label">Founder preview</div>
               <div class="hero-card-title">Et mere eksklusivt alternativ til Excel-kaos</div>
             </div>
-            <div class="live-badge">Boutique finance platform</div>
+            <div class="live-badge">Founder-led platform</div>
           </div>
 
           <p class="muted">
-            Mange organisationer har brug for mere professionaliseret økonomistyring, men ønsker hverken at blive låst i tunge systemer eller trukket ind i lange, dyre IT-forløb. SchellLogic er skabt som et mere intelligent mellemrum: elegant, fokuseret og bygget til praksis.
+            Mange organisationer har brug for mere professionaliseret økonomistyring, men ønsker hverken at blive låst i tunge systemer eller trukket ind i lange, dyre IT-forløb. SchellLogic er skabt som et mere intelligent alternativ: elegant, fokuseret og bygget til praksis.
           </p>
 
           <div class="dashboard-grid">
@@ -892,7 +917,7 @@
           <div class="eyebrow">Min tilgang</div>
           <h2>Grounded, intelligent og menneskelig</h2>
           <p class="muted">
-            Jeg tror på teknologi, der hjælper rigtigt. Ikke teknologi for teknologiens skyld. SchellLogic er derfor bygget som et boutique produkt: mere nærværende, mere gennemtænkt og mere respektfuldt over for organisationens ressourcer og virkelighed.
+            Jeg tror på teknologi, der hjælper rigtigt. Ikke teknologi for teknologiens skyld. SchellLogic er derfor bygget som et specialiseret, gennemtænkt og nærværende produkt — med respekt for organisationens ressourcer og virkelighed.
           </p>
           <ul class="checklist">
             <li>Finansfaglighed og softwareudvikling samlet i én profil</li>
