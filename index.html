@@ -591,6 +591,27 @@
       font-size: 0.96rem;
     }
 
+    .contact-logo-wrap {
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 240px;
+      padding: 20px 12px 8px;
+    }
+
+    .contact-logo {
+      width: min(100%, 360px);
+      max-height: 240px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      filter:
+        drop-shadow(0 0 18px rgba(72, 145, 255, 0.22))
+        drop-shadow(0 0 40px rgba(57, 126, 255, 0.18))
+        drop-shadow(0 16px 34px rgba(0, 0, 0, 0.28));
+    }
+
     .footer {
       padding: 30px 0 46px;
       color: var(--muted);
@@ -617,6 +638,7 @@
 
     @media (max-width: 640px) {
       .hero { padding-top: 42px; }
+
       .feature, .module, .about-card, .contact-card, .hero-card, .highlight, .quote-card {
         padding: 20px;
       }
@@ -630,6 +652,16 @@
       .brand-logo {
         width: 46px;
         height: 46px;
+      }
+
+      .contact-logo-wrap {
+        min-height: 180px;
+        margin-top: 26px;
+      }
+
+      .contact-logo {
+        width: min(100%, 280px);
+        max-height: 180px;
       }
     }
   </style>
@@ -923,6 +955,10 @@
               <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
                 <a class="btn btn-primary" href="mailto:SchellLogic@proton.me">Book kaffe / demo</a>
                 <a class="btn btn-secondary" href="mailto:SchellLogic@proton.me">Få sparring</a>
+              </div>
+
+              <div class="contact-logo-wrap">
+                <img src="logo1.png" alt="SchellLogic logo" class="contact-logo" />
               </div>
             </article>
           </div>
